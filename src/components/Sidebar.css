@@ -1,8 +1,16 @@
 .sidebar {
-    width: 200px;
+    width: 250px;
     text-align: left;
     margin: 10px;
 }
-.sidebar-photo {
-    width: inherit;
+
+.primary-text {
+}
+
+.secondary-text {
+    font-size: 12px;
+}
+
+img {
+    width: 250px;
 }
