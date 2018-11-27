@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import SidebarContainer from './components/SidebarContainer';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import photo from './assets/stevencox.jpg';
-import * as Content from './content/StaticContent';
 import RightSidebar from './components/RightSidebar';
 import LeftSidebar from './components/LeftSidebar';
 

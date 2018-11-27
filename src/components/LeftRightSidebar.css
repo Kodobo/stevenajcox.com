@@ -1,0 +1,16 @@
+.LeftSidebar, .RightSidebar {
+    min-height: calc(100vh - 125px);
+    background-color: #E76300;
+}
+
+.LeftSidebarGradient, .RightSidebarGradient {
+    width: 40px;
+}
+
+.LeftSidebarGradient {
+    background-image: linear-gradient(to right, #E76300, white)
+}
+
+.RightSidebarGradient {
+    background-image: linear-gradient(to left, #E76300, white)
+}
