@@ -9,12 +9,10 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import photo from './assets/stevencox.jpg';
 import * as Content from './content/StaticContent';
+import RightSidebar from './components/RightSidebar';
+import LeftSidebar from './components/LeftSidebar';
 
 class App extends Component {
-  generateParagraphs = content => {
-    return content.map(sentence => <p>{sentence}</p>);
-  };
-
   render() {
       return (
           <Router>
@@ -25,32 +23,12 @@ class App extends Component {
                       <p>Sharing best practice, ideas and opinions from around the world</p>
                   </div>
                   <div className="main-body">
-                    <SidebarContainer>
-                      <Sidebar header="Steven Cox">
-                        <img src={photo} className="sidebar-photo"/>
-                      </Sidebar>
-                      <Sidebar header="Welcome!" style="secondary-text">
-                        {this.generateParagraphs(Content.Welcome)}
-                      </Sidebar>
-                    </SidebarContainer>
+                    <LeftSidebar />
                     <Route exact path="/" component={Home}/>
                     <Route path="/blog" component={Blog}/>
                     <Route path="/services" component={Services}/>
                     <Route path="/contact" component={Contact}/>
-                    <SidebarContainer>
-                      <Sidebar header="Linked Content">
-                        <a href="#">Somewhere</a>
-                        <br />
-                        <a href="#">Over</a>
-                        <br />
-                        <a href="#">The</a>
-                        <br />
-                        <a href="#">Rainbow</a>
-                      </Sidebar>
-                      <Sidebar header="Recent Tweets">
-                        <p>Nothing here yet...</p>
-                      </Sidebar>
-                    </SidebarContainer>
+                    <RightSidebar />
                   </div>
               </div>
           </Router>
