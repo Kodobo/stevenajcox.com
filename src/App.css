@@ -1,13 +1,30 @@
+* {
+    --PASTEL-BLUE: #31658c;
+    --GUNMETAL-GREY: #2C3539;
+    --LIGHT-ORANGE: #ff8a10;
+    --ORANGE: #E76300;
+
+    --HEADER-COLOR: VAR(--GUNMETAL-GREY);
+}
+
 .main-body {
     display: flex;
 }
 
 .header-bar {
     text-align: left;
-    border: solid 1px black;
-    padding: 0 10px;
+    border: solid 1px var(--HEADER-COLOR);
+    padding: 0 50px;
+    background-color: var(--HEADER-COLOR);
+    color: white;
 }
 
 .body-content {
-    width: 80%;
+    width: 100%;
+    padding-top: 25px;
+    margin: 50px;
+}
+
+#di_model {
+    width: 100%;
 }
