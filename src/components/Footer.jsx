@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Footer.css';
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class Footer extends Component {
   render() {
@@ -18,28 +19,28 @@ export default class Footer extends Component {
              target="_blank"
              rel="noopener noreferrer"
           >
-            LinkedIn
+            <FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" />
           </a>
           <a className="footer-link"
              href="https://twitter.com/StevenAJC"
              target="_blank"
              rel="noopener noreferrer"
           >
-            Twitter
+            <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" />
           </a>
           <a className="footer-link"
              href="https://www.instagram.com/stevenajcox/"
              target="_blank"
              rel="noopener noreferrer"
           >
-            Instagram
+            <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
           </a>
         </div>
         <div className="footer-section">
           <p className="fineprint">&copy; 2018 Steven Cox</p>
         </div>
         <div className="footer-section">
-          <p className="fineprint">Website created by Kupo-po Ltd</p>
+          <p className="fineprint">Website created by Kodobo</p>
         </div>
       </div>
     )
