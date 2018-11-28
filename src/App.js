@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from './pages/Home';
 import Blog from './pages/Blog';
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 
 class App extends Component {
     render() {
@@ -20,6 +22,8 @@ class App extends Component {
                         <Sidebar/>
                         <Route exact path="/" component={Home}/>
                         <Route path="/blog" component={Blog}/>
+                        <Route path="/services" component={Services}/>
+                        <Route path="/contact" component={Contact}/>
                         <Sidebar/>
                     </div>
                 </div>
