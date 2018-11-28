@@ -1,6 +1,10 @@
+* {
+    --SIDEBAR-COLOR: var(--LIGHT-ORANGE);
+}
+
 .LeftSidebar, .RightSidebar {
     min-height: calc(100vh - 125px);
-    background-color: #E76300;
+    background-color: var(--SIDEBAR-COLOR);
 }
 
 .LeftSidebarGradient, .RightSidebarGradient {
@@ -8,9 +12,9 @@
 }
 
 .LeftSidebarGradient {
-    background-image: linear-gradient(to right, #E76300, white)
+    background-image: linear-gradient(to right, var(--SIDEBAR-COLOR), white)
 }
 
 .RightSidebarGradient {
-    background-image: linear-gradient(to left, #E76300, white)
+    background-image: linear-gradient(to left, var(--SIDEBAR-COLOR), white)
 }
