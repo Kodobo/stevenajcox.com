@@ -1,0 +1,31 @@
+.footer {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: var(--GUNMETAL-GREY);
+    padding: 10px;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 32px;
+    max-height: 50px;
+    margin: 5px 0;
+}
+
+.footer-link {
+    color: lightskyblue;
+    margin: 0 20px;
+
+}
+
+.fineprint {
+    margin: 5px 0;
+    padding: 0;
+    font-size: 12px;
+    color: white;
+}

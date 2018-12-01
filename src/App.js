@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import Footer from './components/Footer'
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from './pages/Home';
@@ -8,6 +9,10 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import RightSidebar from './components/RightSidebar';
 import LeftSidebar from './components/LeftSidebar';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+
+library.add(faLinkedin, faTwitter, faInstagram);
 
 class App extends Component {
   render() {
@@ -27,6 +32,7 @@ class App extends Component {
                     <Route path="/contact" component={Contact}/>
                     <RightSidebar />
                   </div>
+                  <Footer />
               </div>
           </Router>
       );
