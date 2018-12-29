@@ -12,13 +12,11 @@ const getAllPosts = callback => {
 };
 
 export const getPosts = () => {
-  getAllPosts((err, res) => {
+  return new Promise(resolve => {
+    getAllPosts((err, res) => {
     if(err) {throw err;}
     const parsedRes = JSON.parse(res);
-    const posts = parsedRes.items.map(item => item.content);
-
-    posts.forEach(post => {
-      console.log(post);
+    resolve(parsedRes.items.map(item => item.content));
     })
   })
 };
