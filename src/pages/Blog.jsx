@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getPosts } from '../apis/bloggerApi';
 import ReactHtmlParser from 'react-html-parser';
 import Loader from 'react-loader-spinner';
+import moment from 'moment';
 import './Blog.css';
 
 export default class Blog extends Component {
@@ -41,7 +42,20 @@ export default class Blog extends Component {
   renderPosts = () => {
     const { bloggerPosts } = this.state;
     return bloggerPosts.map(post => {
-      return ReactHtmlParser(post);
+      return (
+        <div>
+          <div className="BlogPostContainer">
+            <h3>
+              {ReactHtmlParser(post.title)}
+            </h3>
+            <h6>
+              {ReactHtmlParser(moment(post.published).format("dddd Do MMMM YYYY"))}
+            </h6>
+            {ReactHtmlParser(post.content)}
+          </div>
+          <hr/>
+        </div>
+      );
     });
   };
 
@@ -51,6 +65,7 @@ export default class Blog extends Component {
         <h1>
             Blog
         </h1>
+        <hr/>
         {this.renderBlogPage()}
       </div>
     )

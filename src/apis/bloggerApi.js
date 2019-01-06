@@ -16,7 +16,7 @@ export const getPosts = () => {
     getAllPosts((err, res) => {
     if(err) {throw err;}
     const parsedRes = JSON.parse(res);
-    resolve(parsedRes.items.map(item => item.content));
+    resolve(parsedRes.items.map(item => item));
     })
   })
 };
