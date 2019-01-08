@@ -8,7 +8,6 @@ import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import RightSidebar from './components/RightSidebar';
 import LeftSidebar from './components/LeftSidebar';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -28,7 +27,6 @@ class App extends Component {
                     <Route path="/blog" component={Blog}/>
                     <Route path="/services" component={Services}/>
                     <Route path="/contact" component={Contact}/>
-                    <RightSidebar />
                   </div>
                   <Footer />
               </div>

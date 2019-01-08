@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import Sidebar from "./Sidebar";
 import SidebarContainer from "./SidebarContainer";
 import photo from "../assets/stevencox.jpg";
-import * as Content from "../content/StaticContent";
 import './LeftRightSidebar.css';
-import { generateParagraphs } from '../helpers'
 
 export default class LeftSidebar extends Component {
+  componentDidMount() {
+    const twitterWidget = document.createElement('script');
+    twitterWidget.type = 'text/javascript';
+    twitterWidget.src = "https://platform.twitter.com/widgets.js";
+    document.head.appendChild(twitterWidget);
+  }
+
   render() {
     return (
       <>
@@ -15,8 +20,15 @@ export default class LeftSidebar extends Component {
             <Sidebar header="Steven Cox">
               <img src={photo} className="sidebar-photo"/>
             </Sidebar>
-            <Sidebar header="Welcome!" style="secondary-text">
-              {generateParagraphs(Content.Welcome)}
+            <Sidebar>
+              <a className="twitter-timeline"
+                 data-theme="dark"
+                 data-height="800"
+                 data-link-color="#FAB81E"
+                 href="https://twitter.com/StevenAJC?ref_src=twsrc%5Etfw"
+              >
+                Tweets by StevenAJC
+              </a>
             </Sidebar>
           </SidebarContainer>
         </div>
