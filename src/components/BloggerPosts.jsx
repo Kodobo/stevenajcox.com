@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {getPosts} from "../apis/bloggerApi";
 import ReactHtmlParser from "react-html-parser";
 import moment from "moment";
-import Loader from "react-loader-spinner";
+import LoaderSpinner from '../components/LoaderSpinner'
 
 export default class BloggerPosts extends Component {
   constructor(props) {
@@ -22,16 +22,6 @@ export default class BloggerPosts extends Component {
         this.setState({loading: false})
       })
   }
-
-  renderLoadingIcon = () => {
-    return (
-      <div className="LoadingContainer">
-        <Loader type="CradleLoader"
-                height="100"
-                width="100" />
-      </div>
-    );
-  };
 
   renderBlogPosts = () => {
     const { bloggerPosts } = this.state;
@@ -56,6 +46,6 @@ export default class BloggerPosts extends Component {
   render() {
     const { loading } = this.state;
 
-    return loading ? this.renderLoadingIcon() : this.renderBlogPosts();
+    return loading ? <LoaderSpinner /> : this.renderBlogPosts();
   };
 }
