@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './components/Footer'
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Route} from "react-router-dom";
+import HeaderBar from './components/HeaderBar';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Services from "./pages/Services";
@@ -20,10 +21,7 @@ class App extends Component {
           <Router>
               <div className="App">
                   <Navbar/>
-                  <div className="header-bar">
-                      <h1>Steven AJ Cox</h1>
-                      <p>Sharing best practice, ideas and opinions from around the world</p>
-                  </div>
+                  <HeaderBar />
                   <div className="main-body">
                     <LeftSidebar />
                     <Route exact path="/" component={Home}/>

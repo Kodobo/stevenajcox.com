@@ -1,0 +1,15 @@
+*{
+    --HEADER-COLOR: VAR(--GUNMETAL-GREY);
+}
+
+.header-bar {
+    text-align: left;
+    border: solid 1px var(--HEADER-COLOR);
+    padding: 0 50px;
+    background-color: var(--HEADER-COLOR);
+    color: white;
+}
+
+.header-title {
+    margin: 0;
+}
