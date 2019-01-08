@@ -19,7 +19,6 @@ class App extends Component {
       return (
           <Router>
               <div className="App">
-                  <Navbar/>
                   <HeaderBar />
                   <div className="main-body">
                     <LeftSidebar />

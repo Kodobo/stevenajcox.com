@@ -1,16 +1,16 @@
 .navbar {
+    display: flex;
     width: 100%;
-    height: 50px;
     background-color: var(--GUNMETAL-GREY);
     font-size: 16px;
-    display: flex;
 }
 
 .navbar-item {
-    height: 50%;
+    display: flex;
+    min-width: 75px;
     flex-grow: 1;
-    text-align: center;
-    align-self: center;
+    justify-content: center; /*Horizontal align navbar-links*/
+    align-self: center; /*Vertical align navbar-links*/
 }
 
 .navbar-link {

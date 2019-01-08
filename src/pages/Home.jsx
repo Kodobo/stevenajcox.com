@@ -7,6 +7,7 @@ export default class Home extends Component {
 
     return (
       <div className="body-content">
+        <h1>About Me</h1>
         {generateParagraphs(Content.Welcome)}
       </div>
     )
