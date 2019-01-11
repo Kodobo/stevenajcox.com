@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { StyledNavbar, NavbarLinks, NavbarLinksList, NavbarLink } from './styles/Navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export default class Navbar extends Component {
 
     render() {
@@ -7,10 +9,24 @@ export default class Navbar extends Component {
             <StyledNavbar>
                 <NavbarLinks>
                   <NavbarLinksList>
-                    <NavbarLink exact to="/">Home</NavbarLink>
-                    <NavbarLink exact to="/blog">Blog</NavbarLink>
-                    <NavbarLink exact to="/services">Services</NavbarLink>
-                    <NavbarLink exact to="/contact">Contact</NavbarLink>
+                    <NavbarLink exact to="/">
+                      <FontAwesomeIcon icon={['fa', 'home']} size="2x" />
+                      <br/>
+                      Home
+                    </NavbarLink>
+                    <NavbarLink exact to="/blog">
+                      <FontAwesomeIcon icon={['fa', 'lightbulb']} size="2x" />
+                      <br/>Insights
+                    </NavbarLink>
+                    <NavbarLink exact to="/services">
+                      <FontAwesomeIcon icon={['fa', 'handshake']} size="2x" />
+                      <br/>
+                      Services
+                    </NavbarLink>
+                    <NavbarLink exact to="/contact">
+                      <FontAwesomeIcon icon={['fa', 'address-card']} size="2x" />
+                      <br/>Contact
+                    </NavbarLink>
                   </NavbarLinksList>
                 </NavbarLinks>
             </StyledNavbar>

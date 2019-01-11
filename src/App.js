@@ -10,8 +10,9 @@ import Contact from "./pages/Contact";
 import LeftSidebar from './components/LeftSidebar';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faHome, faLightbulb, faHandshake, faAddressCard } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faLinkedin, faTwitter, faInstagram);
+library.add(faLinkedin, faTwitter, faInstagram, faHome, faLightbulb, faHandshake, faAddressCard);
 
 class App extends Component {
   render() {
