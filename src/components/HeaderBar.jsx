@@ -1,19 +1,17 @@
 import React, { Component } from "react";
 import NavBar from './Navbar';
-import './HeaderBar.css';
-import Home from "../pages/Home";
-import {Link, Route} from "react-router-dom";
+import { StyledHeaderBar, HeaderBarRouterLink, HeaderTitle } from './styles/HeaderBar';
 
 export default class HeaderBar extends Component {
   render() {
     return (
-      <div className="header-bar">
-        <Link to="/" className="header-bar-text">
-          <h1 className="header-title">Steven AJ Cox</h1>
-          <p className="header-subtitle">Sharing best practice, ideas and opinions from around the world</p>
-        </Link>
+      <StyledHeaderBar>
+        <HeaderBarRouterLink to="/">
+          <HeaderTitle>Steven AJ Cox</HeaderTitle>
+          <p>Sharing best practice, ideas and opinions from around the world</p>
+        </HeaderBarRouterLink>
         <NavBar />
-      </div>
+      </StyledHeaderBar>
     )
   }
 }

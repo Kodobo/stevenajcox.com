@@ -1,0 +1,6 @@
+export const COLOURS = {
+'PASTELBLUE': '#31658c',
+'GUNMETALGREY': '#2C3539',
+'LIGHTORANGE': '#ff8a10',
+'ORANGE': '#E76300'
+};
