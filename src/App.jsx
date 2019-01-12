@@ -16,20 +16,20 @@ library.add(faLinkedin, faTwitter, faInstagram, faHome, faLightbulb, faHandshake
 
 export default class App extends Component {
   render() {
-      return (
-          <Router>
-              <div className="App">
-                  <HeaderBar />
-                  <MainBody>
-                    <LeftSidebar />
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/blog" component={Blog}/>
-                    <Route path="/services" component={Services}/>
-                    <Route path="/contact" component={Contact}/>
-                  </MainBody>
-                  <Footer />
-              </div>
-          </Router>
-      );
+    return (
+      <Router>
+        <div className="App">
+          <HeaderBar />
+          <MainBody>
+            <LeftSidebar />
+            <Route exact path="/" component={Home}/>
+            <Route path="/blog" component={Blog}/>
+            <Route path="/services" component={Services}/>
+            <Route path="/contact" component={Contact}/>
+          </MainBody>
+          <Footer />
+        </div>
+      </Router>
+    );
   }
 };

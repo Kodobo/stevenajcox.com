@@ -9,14 +9,12 @@ export default class Sidebar extends Component {
 
   render() {
     return (
-      <>
-        <StyledSidebar>
-          {this.renderHeaderOrNull()}
-          <div className={this.props.style}>
-            {this.props.children}
-          </div>
-        </StyledSidebar>
-      </>
+      <StyledSidebar>
+        {this.renderHeaderOrNull()}
+        <div className={this.props.style}>
+          {this.props.children}
+        </div>
+      </StyledSidebar>
     )
   }
 }

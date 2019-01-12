@@ -14,25 +14,23 @@ export default class LeftSidebar extends Component {
 
   render() {
     return (
-      <>
-        <StyledLeftSidebar>
-          <SidebarContainer>
-            <Sidebar header="Steven Cox">
-              <SidebarImage src={photo} className="sidebar-photo"/>
-            </Sidebar>
-            <Sidebar>
-              <a className="twitter-timeline"
-                 data-theme="dark"
-                 data-height="800"
-                 data-link-color="#FAB81E"
-                 href="https://twitter.com/StevenAJC?ref_src=twsrc%5Etfw"
-              >
-                Tweets by StevenAJC
-              </a>
-            </Sidebar>
-          </SidebarContainer>
-        </StyledLeftSidebar>
-      </>
+      <StyledLeftSidebar>
+        <SidebarContainer>
+          <Sidebar header="Steven Cox">
+            <SidebarImage src={photo} className="sidebar-photo"/>
+          </Sidebar>
+          <Sidebar>
+            <a className="twitter-timeline"
+               data-theme="dark"
+               data-height="800"
+               data-link-color="#FAB81E"
+               href="https://twitter.com/StevenAJC?ref_src=twsrc%5Etfw"
+            >
+              Tweets by StevenAJC
+            </a>
+          </Sidebar>
+        </SidebarContainer>
+      </StyledLeftSidebar>
     )
   }
 }
