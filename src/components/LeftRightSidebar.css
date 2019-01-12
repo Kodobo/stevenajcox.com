@@ -12,9 +12,13 @@
 }
 
 .LeftSidebarGradient {
-    background-image: linear-gradient(to right, var(--SIDEBAR-COLOR), white)
+    background-image: linear-gradient(to right, var(--SIDEBAR-COLOR), white);
 }
 
 .RightSidebarGradient {
-    background-image: linear-gradient(to left, var(--SIDEBAR-COLOR), white)
+    background-image: linear-gradient(to left, var(--SIDEBAR-COLOR), white);
+}
+
+.sidebar-photo {
+    width: 250px;
 }

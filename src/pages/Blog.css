@@ -1,0 +1,9 @@
+.LoadingContainer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.BlogPostContainer {
+    margin: 20px 0;
+}
