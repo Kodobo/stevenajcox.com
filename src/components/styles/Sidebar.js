@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { COLOURS } from "../../globalStyles/colours";
-import { DIMENSIONS } from "../../globalStyles/dimensions";
+import { COLOURS } from "../../styleConstants/colours";
+import { DIMENSIONS } from "../../styleConstants/dimensions";
 
 export const StyledLeftSidebar = styled.div`
   background-color: ${COLOURS.PINK_RED};

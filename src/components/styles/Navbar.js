@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { COLOURS } from '../../globalStyles/colours';
+import { COLOURS } from '../../styleConstants/colours';
 
 export const StyledNavbar = styled.div`
   display: flex;

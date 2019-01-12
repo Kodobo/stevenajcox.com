@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-import { COLOURS } from '../../globalStyles/colours';
+import { COLOURS } from '../../styleConstants/colours';
 
 export const StyledHeaderBar = styled.div`
   display: flex;
