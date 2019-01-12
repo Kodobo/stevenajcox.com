@@ -3,6 +3,7 @@ import {getPosts} from "../apis/bloggerApi";
 import ReactHtmlParser from "react-html-parser";
 import moment from "moment";
 import LoaderSpinner from '../components/LoaderSpinner'
+import { BlogPostContainer } from './styles/BloggerPosts';
 
 export default class BloggerPosts extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ export default class BloggerPosts extends Component {
     return bloggerPosts.map(post => {
       return (
         <div>
-          <div className="BlogPostContainer">
+          <BlogPostContainer>
             <h3>
               {ReactHtmlParser(post.title)}
             </h3>
@@ -36,7 +37,7 @@ export default class BloggerPosts extends Component {
               {ReactHtmlParser(moment(post.published).format("dddd Do MMMM YYYY"))}
             </h6>
             {ReactHtmlParser(post.content)}
-          </div>
+          </BlogPostContainer>
           <hr/>
         </div>
       );

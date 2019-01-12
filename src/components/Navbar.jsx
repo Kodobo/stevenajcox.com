@@ -1,24 +1,34 @@
 import React, {Component} from 'react';
-import './Navbar.css';
-import {Link} from "react-router-dom";
-export default class Navbar extends Component {
+import { StyledNavbar, NavbarLinks, NavbarLinksList, NavbarLink } from './styles/Navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-    render() {
-        return (
-            <div className="navbar">
-                <div className="navbar-item">
-                    <Link to="/" className="navbar-link">Home</Link>
-                </div>
-                <div className="navbar-item">
-                    <Link to="/blog" className="navbar-link">Blog</Link>
-                </div>
-                <div className="navbar-item">
-                    <Link to="/services" className="navbar-link">Services</Link>
-                </div>
-                <div className="navbar-item">
-                    <Link to="/contact" className="navbar-link">Contact</Link>
-                </div>
-            </div>
-        )
-    }
+export default class Navbar extends Component {
+  render() {
+    return (
+      <StyledNavbar>
+        <NavbarLinks>
+          <NavbarLinksList>
+            <NavbarLink exact to="/">
+              <FontAwesomeIcon icon={['fa', 'home']} size="2x" />
+              <br/>
+              Home
+            </NavbarLink>
+            <NavbarLink exact to="/blog">
+              <FontAwesomeIcon icon={['fa', 'lightbulb']} size="2x" />
+              <br/>Insights
+            </NavbarLink>
+            <NavbarLink exact to="/services">
+              <FontAwesomeIcon icon={['fa', 'handshake']} size="2x" />
+              <br/>
+              Services
+            </NavbarLink>
+            <NavbarLink exact to="/contact">
+              <FontAwesomeIcon icon={['fa', 'address-card']} size="2x" />
+              <br/>Contact
+            </NavbarLink>
+          </NavbarLinksList>
+        </NavbarLinks>
+      </StyledNavbar>
+    )
+  }
 }
