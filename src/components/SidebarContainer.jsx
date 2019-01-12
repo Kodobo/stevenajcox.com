@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import './SidebarContainer.css';
+import { StyledSidebarContainer } from './styles/Sidebar';
+
 
 export default class SidebarContainer extends Component {
   render() {
     return (
-      <div className="sidebar-container">
+      <StyledSidebarContainer>
         {this.props.children}
-      </div>
+      </StyledSidebarContainer>
     )
   }
 }

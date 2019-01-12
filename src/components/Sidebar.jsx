@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import './Sidebar.css'
+import { StyledSidebar } from './styles/Sidebar';
+
 
 export default class Sidebar extends Component {
   renderHeaderOrNull() {
@@ -9,12 +10,12 @@ export default class Sidebar extends Component {
   render() {
     return (
       <>
-        <div className="sidebar">
+        <StyledSidebar>
           {this.renderHeaderOrNull()}
           <div className={this.props.style}>
             {this.props.children}
           </div>
-        </div>
+        </StyledSidebar>
       </>
     )
   }

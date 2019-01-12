@@ -6,7 +6,7 @@ export const StyledNavbar = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: ${COLOURS.GUNMETALGREY};
+  background-color: ${COLOURS.GUNMETAL_GREY};
   font-size: 16px;
   align-self: center;
 `;
@@ -33,8 +33,8 @@ export const NavbarLink = styled(NavLink).attrs({to: props => props.to})`
       
     &.active {
       font-weight: bold;
-      color: ${COLOURS.PINKRED};
-      background-color: ${COLOURS.LIGHTGREY};
+      color: ${COLOURS.PINK_RED};
+      background-color: ${COLOURS.LIGHT_GREY};
     }
   }
 `;

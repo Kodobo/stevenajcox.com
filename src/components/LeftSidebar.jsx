@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Sidebar from "./Sidebar";
 import SidebarContainer from "./SidebarContainer";
 import photo from "../assets/stevencox.jpg";
-import { StyledLeftSidebar } from './styles/Sidebar';
+import { StyledLeftSidebar, SidebarImage } from './styles/Sidebar';
 
 export default class LeftSidebar extends Component {
   componentDidMount() {
@@ -18,7 +18,7 @@ export default class LeftSidebar extends Component {
         <StyledLeftSidebar>
           <SidebarContainer>
             <Sidebar header="Steven Cox">
-              <img src={photo} className="sidebar-photo"/>
+              <SidebarImage src={photo} className="sidebar-photo"/>
             </Sidebar>
             <Sidebar>
               <a className="twitter-timeline"

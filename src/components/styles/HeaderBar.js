@@ -5,9 +5,9 @@ import { COLOURS } from '../../globalStyles/colours';
 export const StyledHeaderBar = styled.div`
   display: flex;
   text-align: left;
-  border: solid 1px ${COLOURS.GUNMETALGREY};
+  border: solid 1px ${COLOURS.GUNMETAL_GREY};
   padding-left: 50px;
-  background-color: ${COLOURS.GUNMETALGREY};
+  background-color: ${COLOURS.GUNMETAL_GREY};
   color: white;
 `;
 

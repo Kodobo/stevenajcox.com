@@ -15,7 +15,7 @@ export const StyledFooter = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  background-color: ${COLOURS.GUNMETALGREY};
+  background-color: ${COLOURS.GUNMETAL_GREY};
   padding: 10px;
 `;
 
