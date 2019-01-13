@@ -14,7 +14,7 @@ class FormContainer extends Component {
         senderEmail: '',
         message: ''
       },
-      sendingDisabled: false
+      sendingDisabled: true
     };
   }
 
@@ -55,40 +55,28 @@ class FormContainer extends Component {
         this.setState({ formEmailSent: true });
         toastManager.add("Message sent successfully!", { appearance: 'success', autoDismiss: true });
         this.handleClearForm();
-        this.setState({ sendingDisabled: false });
       })
       .catch(err => {
         console.error('Failed to send email, error: ', err);
         toastManager.add("Sorry, there was a problem. Please try again!", { appearance: 'error', autoDismiss: true });
-        this.setState({ sendingDisabled: false });
       }
     )
   }
+
+  isSendingDisabled = () => {
+    return !!(Object.values(this.state.newUser).some(value => value === ''))
+  };
 
   handleInput = e => {
     const value = e.target.value;
     const name = e.target.name;
 
-    this.setState( prevState => {
-        return {
-          newUser : {
-            ...prevState.newUser, [name]: value
-          }
-        }
+    this.setState(prevState => {
+      return {
+        newUser: {...prevState.newUser, [name]: value},
+        sendingDisabled: this.isSendingDisabled()
       }
-    )
-  };
-
-  handleTextArea = e => {
-    const value = e.target.value;
-    this.setState(
-      prevState => ({
-        newUser: {
-          ...prevState.newUser,
-          message: value
-        }
-      })
-    );
+    });
   };
 
   handleClearForm = () => {
@@ -119,7 +107,7 @@ class FormContainer extends Component {
                   rows={10}
                   value={newUser.message}
                   name={"message"}
-                  handleChange={this.handleTextArea}
+                  handleChange={this.handleInput}
                   placeholder={"Please write your message here"}/>
         <Button title={"Submit"}
                 action={this.handleFormSubmit}
