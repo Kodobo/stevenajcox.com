@@ -20,6 +20,7 @@ export const NavbarLinks = styled.div`
 export const NavbarLinksList = styled.ul`
   height: 100%;
   margin: 0;
+  padding: 0;
   display: flex;
 `;
 
