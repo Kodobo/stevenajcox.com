@@ -14,6 +14,8 @@ import { faHome, faLightbulb, faHandshake, faAddressCard } from '@fortawesome/fr
 
 library.add(faLinkedin, faTwitter, faInstagram, faHome, faLightbulb, faHandshake, faAddressCard);
 
+const DOMAIN = "/stevenajcox.com";
+
 export default class App extends Component {
   render() {
     return (
@@ -22,7 +24,7 @@ export default class App extends Component {
           <HeaderBar />
           <MainBody>
             <LeftSidebar />
-            <Route exact path="/" component={Home}/>
+            <Route exact path={`${DOMAIN}/`} component={Home}/>
             <Route path="/blog" component={Blog}/>
             <Route path="/services" component={Services}/>
             <Route path="/contact" component={Contact}/>
