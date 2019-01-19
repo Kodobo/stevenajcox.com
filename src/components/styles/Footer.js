@@ -34,7 +34,7 @@ export const FooterLink = styled.a`
   ${FooterLinkStyle};
 `;
 
-export const FooterRouterLink = styled(Link).attrs({to: props => props.to})`
+export const FooterRouterLink = styled(Link).attrs(props => ({to: props.to}))`
   ${FooterLinkStyle};
 `;
 

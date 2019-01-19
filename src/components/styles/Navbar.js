@@ -20,10 +20,11 @@ export const NavbarLinks = styled.div`
 export const NavbarLinksList = styled.ul`
   height: 100%;
   margin: 0;
+  padding: 0;
   display: flex;
 `;
 
-export const NavbarLink = styled(NavLink).attrs({to: props => props.to})`
+export const NavbarLink = styled(NavLink).attrs(props => ({to: props.to}))`
   :not(.MsoHyperlink) {
     padding: 25px;
     text-decoration: none;
