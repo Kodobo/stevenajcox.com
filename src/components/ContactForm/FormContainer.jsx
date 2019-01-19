@@ -5,15 +5,17 @@ import Button from './Button';
 import './FormContainer.css';
 import * as emailjs from 'emailjs-com';
 
+const formContent = {
+  name: '',
+  senderEmail: '',
+  message: ''
+};
+
 class FormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newUser: {
-        name: '',
-        senderEmail: '',
-        message: ''
-      },
+      formContent,
       sendingDisabled: true
     };
   }
@@ -22,21 +24,18 @@ class FormContainer extends Component {
     emailjs.init("user_zQzSvf211by5lDKI3R5pl");
   };
 
-  handleFormSubmit = (event) => {
+  handleFormSubmit = event => {
+    const { formContent } = this.state;
     event.preventDefault();
     const template = "template_0qVgU5Lv";
 
     this.sendEmail(
       template,
-      this.state.newUser.senderEmail,
-      this.state.newUser.name,
+      formContent.senderEmail,
+      formContent.name,
       "Steven",
-      this.state.newUser.message
+      formContent.message
       );
-
-    this.setState({
-      formSubmitted: true
-    })
   };
 
   sendEmail (templateId, senderEmail, fromName, toName, message) {
@@ -52,7 +51,6 @@ class FormContainer extends Component {
         message_html: message
       })
       .then(res => {
-        this.setState({ formEmailSent: true });
         toastManager.add("Message sent successfully!", { appearance: 'success', autoDismiss: true });
         this.handleClearForm();
       })
@@ -64,7 +62,8 @@ class FormContainer extends Component {
   }
 
   isSendingDisabled = () => {
-    return !!(Object.values(this.state.newUser).some(value => value === ''))
+    const { formContent } = this.state;
+    return !!(Object.values(formContent).some(value => value === ''))
   };
 
   handleInput = e => {
@@ -73,41 +72,37 @@ class FormContainer extends Component {
 
     this.setState(prevState => {
       return {
-        newUser: {...prevState.newUser, [name]: value},
+        formContent: {...prevState.formContent, [name]: value},
         sendingDisabled: this.isSendingDisabled()
       }
     });
   };
 
   handleClearForm = () => {
-    this.setState({ newUser: {
-        name: '',
-        senderEmail: '',
-        message: ''
-    }})
+    this.setState({ formContent })
   };
 
   render() {
-    const { newUser, sendingDisabled } = this.state;
+    const { formContent, sendingDisabled } = this.state;
     return (
       <form className="container" onSubmit={this.handleFormSubmit}>
         <Input type={'text'}
                title={'Full Name'}
                name={'name'}
-               value={newUser.name}
+               value={formContent.name}
                placeholder={'Please enter your full name'}
-               handleChange={this.handleInput}/>
+               onChange={this.handleInput}/>
         <Input type={'text'}
                title={'Email Address'}
                name={'senderEmail'}
-               value={newUser.senderEmail}
+               value={formContent.senderEmail}
                placeholder={'Please enter your email address'}
-               handleChange={this.handleInput}/>
+               onChange={this.handleInput}/>
         <TextArea title={"Your Message"}
                   rows={10}
-                  value={newUser.message}
+                  value={formContent.message}
                   name={"message"}
-                  handleChange={this.handleInput}
+                  onChange={this.handleInput}
                   placeholder={"Please write your message here"}/>
         <Button title={"Submit"}
                 action={this.handleFormSubmit}
