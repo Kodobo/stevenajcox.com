@@ -5,7 +5,7 @@ import Button from './Button';
 import './FormContainer.css';
 import * as emailjs from 'emailjs-com';
 
-const formContent = {
+const BLANK_FORM = {
   name: '',
   senderEmail: '',
   message: ''
@@ -15,7 +15,7 @@ class FormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      formContent,
+      formContent: BLANK_FORM,
       sendingDisabled: true
     };
   }
@@ -79,7 +79,7 @@ class FormContainer extends Component {
   };
 
   handleClearForm = () => {
-    this.setState({ formContent })
+    this.setState({ formContent: BLANK_FORM })
   };
 
   render() {
