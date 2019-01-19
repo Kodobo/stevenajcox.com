@@ -26,9 +26,9 @@ export default class BloggerPosts extends Component {
 
   renderBlogPosts = () => {
     const { bloggerPosts } = this.state;
-    return bloggerPosts.map(post => {
+    return bloggerPosts.map((post, index) => {
       return (
-        <div>
+        <div key={index}>
           <BlogPostContainer>
             <h3>
               {ReactHtmlParser(post.title)}

@@ -10,7 +10,7 @@ export const StyledHeaderBar = styled.div`
   color: white;
 `;
 
-export const HeaderBarRouterLink = styled(Link).attrs({to: props => props.to})`
+export const HeaderBarRouterLink = styled(Link).attrs(props => ({to: props.to}))`
   :not(.MsoFollowed) {
     width: 290px;
     min-width: 290px;
