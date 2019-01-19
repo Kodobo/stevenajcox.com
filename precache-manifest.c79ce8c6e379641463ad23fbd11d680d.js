@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/stevenajcox.com/static/js/runtime~main.88c6c34d.js"
   },
   {
-    "revision": "dc341b5d91dd24882007",
-    "url": "/stevenajcox.com/static/js/main.dc341b5d.chunk.js"
+    "revision": "d4125306c9c3cb9d5011",
+    "url": "/stevenajcox.com/static/js/main.d4125306.chunk.js"
   },
   {
     "revision": "022379abbc38f2389f31",
     "url": "/stevenajcox.com/static/js/1.022379ab.chunk.js"
   },
   {
-    "revision": "dc341b5d91dd24882007",
+    "revision": "d4125306c9c3cb9d5011",
     "url": "/stevenajcox.com/static/css/main.c0d63a9f.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/stevenajcox.com/static/css/1.4dab16ea.chunk.css"
   },
   {
-    "revision": "ded92bdcc7acefeaaf719055a5b5e7eb",
+    "revision": "604037cd140aac2fc5d6bdc7d8e53827",
     "url": "/stevenajcox.com/index.html"
   }
 ];
