@@ -14,3 +14,8 @@ export const BlogPostContainer = styled.div`
     width: 100% !important;
   }
 `;
+
+export const BlogPostContent = styled.div`
+  max-height: ${props => props.showAll ? `100%` : `200px`};
+  overflow: hidden;
+`;
