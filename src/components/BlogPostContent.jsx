@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { BlogPostContent } from './styles/BloggerPosts';
+import { StyledPostContent, ReadMoreButton } from './styles/BloggerPosts';
 
-export default class BlogPost extends Component {
+export default class BlogPostContent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,7 @@ export default class BlogPost extends Component {
 
   handleReadMore = () => {
     const { showAll } = this.state;
-    this.setState({showAll: !showAll })
+    this.setState({showAll: !showAll})
   };
 
   render() {
@@ -19,10 +19,10 @@ export default class BlogPost extends Component {
     const buttonText = showAll ? 'Read less...' : 'Read more...';
     return (
       <>
-        <BlogPostContent showAll={showAll}>
+        <StyledPostContent showAll={showAll}>
           {this.props.children}
-        </BlogPostContent>
-        <button onClick={this.handleReadMore}>{buttonText}</button>
+        </StyledPostContent>
+        <ReadMoreButton onClick={this.handleReadMore}>{buttonText}</ReadMoreButton>
       </>
     )
   }

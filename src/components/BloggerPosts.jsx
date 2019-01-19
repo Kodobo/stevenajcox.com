@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import {getPosts} from "../apis/bloggerApi";
-import ReactHtmlParser from "react-html-parser";
-import moment from "moment";
 import LoaderSpinner from '../components/LoaderSpinner'
-import { BlogPostContainer } from './styles/BloggerPosts';
-import BlogPost from './BlogPost';
+import { BlogPostHeader, BlogPostContainer } from './styles/BloggerPosts';
+import BlogPostContent from './BlogPostContent';
+import moment from "moment/moment";
+import ReactHtmlParser from "react-html-parser";
 
 export default class BloggerPosts extends Component {
   constructor(props) {
@@ -29,22 +29,22 @@ export default class BloggerPosts extends Component {
     const { bloggerPosts } = this.state;
     return bloggerPosts.map(post => {
       return (
-        <div>
-          <BlogPostContainer>
+        <BlogPostContainer>
+          <BlogPostHeader>
             <h3>
               {ReactHtmlParser(post.title)}
             </h3>
             <h6>
               {ReactHtmlParser(moment(post.published).format("dddd Do MMMM YYYY"))}
             </h6>
-            <BlogPost>
-              {ReactHtmlParser(post.content)}
-            </BlogPost>
-          </BlogPostContainer>
-          <hr/>
-        </div>
+          </BlogPostHeader>
+          <BlogPostContent>
+            {ReactHtmlParser(post.content)}
+          </BlogPostContent>
+          <hr />
+        </BlogPostContainer>
       );
-    });
+    })
   };
 
   render() {
