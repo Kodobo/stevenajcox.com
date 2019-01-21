@@ -7,7 +7,7 @@ export default class Blog extends Component {
     return (
       <BodyContent>
         <h1>
-            Blog
+            Insights
         </h1>
         <hr/>
         <BloggerPosts />
