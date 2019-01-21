@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import { StyledNavbar, NavbarLinks, NavbarLinksList, NavbarLink } from './styles/Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-const DOMAIN = "/stevenajcox.com";
+import { PATHS } from "../globalConstants/paths";
 
 export default class Navbar extends Component {
   render() {
@@ -10,7 +9,7 @@ export default class Navbar extends Component {
       <StyledNavbar>
         <NavbarLinks>
           <NavbarLinksList>
-            <NavbarLink exact to={`${DOMAIN}/`}>
+            <NavbarLink exact to={`${PATHS.DOMAIN}/`}>
               <FontAwesomeIcon icon={['fa', 'home']} size="2x" />
               <br/>
               Home

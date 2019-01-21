@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { StyledFooter, FooterSection, FooterLink, FooterRouterLink, Fineprint } from './styles/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { PATHS } from "../globalConstants/paths";
 
 export default class Footer extends Component {
   render() {
     return (
       <StyledFooter>
         <FooterSection>
-          <FooterRouterLink to='/'>Home</FooterRouterLink>
+          <FooterRouterLink to={`${PATHS.DOMAIN}/`}>Home</FooterRouterLink>
           <FooterRouterLink to="/blog">Blog</FooterRouterLink>
           <FooterRouterLink to="/services">Services</FooterRouterLink>
           <FooterRouterLink to="/contact">Contact</FooterRouterLink>

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from "react-router-dom";
-import { COLOURS } from '../../styleConstants/colours';
+import { COLOURS } from '../../globalConstants/colours';
 
 const FooterLinkStyle = css`
   :not(.MsoHyperlink) {
