@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { COLOURS } from "../../styleConstants/colours";
+import { COLOURS } from "../../globalConstants/colours";
 
 const commonStyles = css`
   padding: 10px;

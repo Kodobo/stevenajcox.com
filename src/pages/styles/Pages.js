@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOURS } from "../../styleConstants/colours";
+import { COLOURS } from "../../globalConstants/colours";
 
 export const BodyContent = styled.div`
   width: 100%;
