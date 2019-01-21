@@ -27,7 +27,7 @@ export default class BloggerPosts extends Component {
 
   renderBlogPosts = () => {
     const { bloggerPosts } = this.state;
-    return bloggerPosts.map(post => {
+    return bloggerPosts.map((post, index) => {
       return (
         <BlogPostContainer>
           <BlogPostHeader>
