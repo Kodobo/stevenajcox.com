@@ -32,6 +32,7 @@ export const StyledPostContent = styled.div`
   ${commonStyles};
   max-height: ${props => props.showAll ? `100%` : `200px`};
   overflow: hidden;
+  word-break: break-word;
 `;
 
 export const ReadMoreButton = styled.button`
