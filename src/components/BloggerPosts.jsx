@@ -29,7 +29,7 @@ export default class BloggerPosts extends Component {
     const { bloggerPosts } = this.state;
     return bloggerPosts.map((post, index) => {
       return (
-        <BlogPostContainer>
+        <BlogPostContainer key={index}>
           <BlogPostHeader>
             <h3>
               {ReactHtmlParser(post.title)}
