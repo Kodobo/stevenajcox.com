@@ -4,6 +4,9 @@ import { COLOURS } from '../../globalConstants/colours';
 import { DIMENSIONS } from '../../globalConstants/dimensions';
 import BREAKPOINTS from '../../globalConstants/breakpoints'
 
+const SIDEBAR_WIDTH_SHRUNK = `calc(${DIMENSIONS.SIDEBAR_WIDTH} * 0.75)`;
+const SIDEBAR_SIDE_MARGIN_HALF = `calc(${DIMENSIONS.SIDEBAR_SIDE_MARGIN} / 2)`;
+
 export const StyledHeaderBar = styled.div`
   display: flex;
   
@@ -27,14 +30,14 @@ export const HeaderBarRouterLink = styled(Link).attrs(props => ({to: props.to}))
     color: inherit;
     
     @media (min-width: ${BREAKPOINTS.TABLET}) and (max-width: ${BREAKPOINTS.DESKTOP}) {
-      width: calc((${DIMENSIONS.SIDEBAR_WIDTH} * 0.75) + 20px);
-      min-width: calc((${DIMENSIONS.SIDEBAR_WIDTH} * 0.75) + 20px);
+      width: calc(${SIDEBAR_WIDTH_SHRUNK} + ${SIDEBAR_SIDE_MARGIN_HALF});
+      min-width: calc(${SIDEBAR_WIDTH_SHRUNK} + ${SIDEBAR_SIDE_MARGIN_HALF});
       padding: 0 30px;
     }
   
     @media (max-width: ${BREAKPOINTS.TABLET}) {
-      width: calc(100% - 20px);
-      min-width: calc(100% - 20px);
+      width: calc(100% - ${SIDEBAR_SIDE_MARGIN_HALF});
+      min-width: calc(100% - ${SIDEBAR_SIDE_MARGIN_HALF});
       padding: 0 10px;
     }
   }
