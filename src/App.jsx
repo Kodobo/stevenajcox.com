@@ -11,7 +11,6 @@ import LeftSidebar from './components/LeftSidebar';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faHome, faLightbulb, faHandshake, faAddressCard } from '@fortawesome/free-solid-svg-icons'
-import { PATHS } from "./globalConstants/paths";
 
 library.add(faLinkedin, faTwitter, faInstagram, faHome, faLightbulb, faHandshake, faAddressCard);
 
@@ -23,10 +22,10 @@ export default class App extends Component {
           <HeaderBar />
           <MainBody>
             <LeftSidebar />
-            <Route exact path={`${PATHS.DOMAIN}/`} component={Home}/>
-            <Route path="/blog" component={Blog}/>
-            <Route path="/services" component={Services}/>
-            <Route path="/contact" component={Contact}/>
+            <Route exact path={`${process.env.REACT_APP_DOMAIN}/`} component={Home}/>
+            <Route path={`${process.env.REACT_APP_DOMAIN}/blog`} component={Blog}/>
+            <Route path={`${process.env.REACT_APP_DOMAIN}/services`} component={Services}/>
+            <Route path={`${process.env.REACT_APP_DOMAIN}/contact`} component={Contact}/>
           </MainBody>
           <Footer />
         </div>
