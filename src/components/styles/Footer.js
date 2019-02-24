@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from "react-router-dom";
 import { COLOURS } from '../../globalConstants/colours';
+import BREAKPOINTS from '../../globalConstants/breakpoints'
 
 const FooterLinkStyle = css`
   :not(.MsoHyperlink) {
@@ -14,9 +15,15 @@ export const StyledFooter = styled.div`
   position: sticky;
   display: flex;
   flex-direction: column;
+  
   max-width: 100%;
   background-color: ${COLOURS.GUNMETAL_GREY};
   padding: 10px;
+  
+  @media (max-width: ${BREAKPOINTS.MOBILE}) {
+    max-width: ${BREAKPOINTS.MOBILE};
+    min-width: 0;
+  }
 `;
 
 export const FooterSection = styled.div`
