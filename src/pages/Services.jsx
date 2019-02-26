@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ServicesContent } from '../content/StaticContent';
 import { BodyContent } from './styles/Pages';
 
 export default class Services extends Component {
@@ -8,6 +9,7 @@ export default class Services extends Component {
         <h1>
           Services
         </h1>
+        {ServicesContent}
       </BodyContent>
     )
   }

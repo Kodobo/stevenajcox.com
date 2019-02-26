@@ -9,7 +9,7 @@ export default class Contact extends Component {
     render() {
         return (
             <BodyContent>
-              <h3> Contact Steven </h3>
+              <h1> Contact Steven </h1>
               <ToastProvider>
                 <FormWithToasts/>
               </ToastProvider>

@@ -1,23 +1,25 @@
-export const Welcome = [
-  `Welcome to my personal blog. I am currently Fujitsu’s ambassador for Diversity and Inclusion and have a passion for finding organisational best practice, and how learnings from them can be shared.`,
-  `I’ve had an extensive career in the technology sector and I am fascinated by how technological advances in automation and artificial intelligence impact the modern workforce and in particular what it means for increasing workplace inclusion and workforce diversity.`,
-  `I’m an executive sponsor of Shine, Fujitsu’s LGBT+ and ally networking group. In 2017 Fujitsu UK was ranked number 48 in Stonewall’s equality index as a result of its work around inclusion.`,
-  `I have featured on the OUTstanding/Financial Times LGBT top executives list and The Times top 50 LGBT executives in Business List. I am proud to be a Stonewall Ambassador.`
-];
+import React from "react";
 
-export const placeholder1 = [`Thursday, 8 November 2018`,
-`I spoke at the Chartered Institute of Personnel's (CIPD) Annual Conference and Exhibition on 7th November 2018 and in advance of that wrote a blog piece for CIPD's website.`,
-`Here's a copy of it; the original piece is at https://events.cipd.co.uk/events/annual/2018/10/25/workplace-inclusion-workforce-diversity-making-it-strategic/`,
-`WORKPLACE INCLUSION, WORKFORCE DIVERSITY – MAKING IT STRATEGIC`,
-`Steven Cox discusses diversity and inclusion in the workplace and shares his framework for strategically aligning D&I initiatives to organisational goals. Steven will be taking part in a World Cafe on 7 November in the Employee Experience, Well-being and People Management stream – A6 | Different approaches to creating a truly inclusive workplace. 
-There is much communication and activity in organisations about diversity and inclusion. Most corporates have had equal opportunity and non-discrimination policies in place for many years. However, the lived experience of people who are “different” in some way is often that they are not as included, or as able to succeed, as others.
-Whether one takes a workforce diversity perspective, or a workplace inclusion one, it is apparent that diversity without inclusion, or inclusion without diversity, doesn’t yield the expected benefits. Equally focusing on one aspect of diversity (e.g. gender) to the exclusion of others can cause more divisions and doesn’t acknowledge that we are all different in a multitude of ways (e.g. the mother with a physical disability, the millennial worker with dyslexia, a female person of colour).
-The reality is that what’s needed in most organisations is a “culture upgrade” – retaining the values and behaviours that have enabled success so far, with some potentially difficult conversations to identify and call out where change is needed. That change will take concerted effort across the whole of the enterprise, and it will take time.
-Given that an organisation is wholly dependent upon its people to deliver its stated objectives, this is clearly a strategic issue. Yet all too often workplace inclusion and workforce diversity is seen as a group of projects in HR needed to address specific issues, with the expectation that good news stories will be created to be marketed externally.
-To enable real change, and the associated benefits, leadership and engagement from the very top of the company is needed, as is a structured strategic approach to ensure that all levels and departments within the organisation are engaged in the change programme. Here’s a summary of a strategic inclusion and diversity framework that connects local D&I programming with the organisation’s strategic goals – be that globally, or across divisions.`,
-`A framework for diversity and inclusion`];
+export const WelcomeContent =
+  <div>
+    <p>Welcome to my personal blog. I am currently Fujitsu’s ambassador for Diversity and Inclusion and have a passion for finding organisational best practice, and how learnings from them can be shared.</p>
+    <p>I’ve had an extensive career in the technology sector and I am fascinated by how technological advances in automation and artificial intelligence impact the modern workforce and in particular what it means for increasing workplace inclusion and workforce diversity.</p>
+    <p>I’m an executive sponsor of Shine, Fujitsu’s LGBT+ and ally networking group. In 2017 Fujitsu UK was ranked number 48 in Stonewall’s equality index as a result of its work around inclusion.</p>
+    <p>I have featured on the OUTstanding/Financial Times LGBT top executives list and The Times top 50 LGBT executives in Business List. I am proud to be a Stonewall Ambassador.</p>
+  </div>;
 
-export const placeholder2 = [`Framework by Steven Cox`,
-`The framework has been developed based upon the collected insights from market research and best practice approaches. At its core is the principle that workplace inclusion and workforce diversity is a business issue that is managed by business executives; implementation is by regional leadership, with HR and line management.
-I’ll be discussing this framework and more, for example how to consider inclusion and diversity from employee and customer perspectives, at the Different Approaches to Creating a Truly Inclusive Workplace module.
-Feel free to reach out if you’d like to discuss these or related topics. Follow me on Twitter, or connect with me on LinkedIn.`];
+export const ServicesContent =
+  <div>
+    <h3>Public Speaking</h3>
+    <p>I am experienced in developing and delivering original content in a wide range of topics for conferences, panels, private events, and more. Topics include (but are not limited to):</p>
+    <ul>
+      <li>Diversity and Inclusion (gender, race & ethnicity, LGBTQ+)</li>
+      <li>Mental Health in the Workplace</li>
+      <li>Industry Trends and Patterns</li>
+      <li>Disruptive Technologies</li>
+    </ul>
+    <h3>Content Creation</h3>
+    <p>As well as speaking at conferences, I can produce engaging thought leadership content and research-based articles or blogs.</p>
+    <h3>Consulting</h3>
+    <p>I have many years of experience as a Consultant in the areas of Strategy, Management Consultancy, Diversity & Inclusion, and Human Capital.</p>
+  </div>;
