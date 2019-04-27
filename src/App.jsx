@@ -4,7 +4,7 @@ import Footer from './components/Footer'
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import HeaderBar from './components/HeaderBar';
 import Home from './pages/Home';
-import Blog from './pages/Blog';
+import Insights from './pages/Insights';
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import LeftSidebar from './components/LeftSidebar';
@@ -24,7 +24,7 @@ export default class App extends Component {
           <MainBody>
             <LeftSidebar />
             <Route exact path={`${PATHS.DOMAIN}/`} component={Home}/>
-            <Route path="/blog" component={Blog}/>
+            <Route path="/blog" component={Insights}/>
             <Route path="/services" component={Services}/>
             <Route path="/contact" component={Contact}/>
           </MainBody>

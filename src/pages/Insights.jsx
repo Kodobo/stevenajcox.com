@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import InsightsExcerpts from '../components/InsightsExcerpts';
 import { BodyContent } from './styles/Pages';
 
-export default class Blog extends Component {
+export default class Insights extends Component {
   render() {
     return (
       <BodyContent>

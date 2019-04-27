@@ -15,7 +15,7 @@ const getWpPosts = (callback) => {
 
   blog.postsList({number: 3})
     .then(list => {
-      // console.log(list)
+      console.log(list)
       callback(list);
     })
     .catch(error => {
@@ -31,6 +31,7 @@ const getRelevantContent = response => {
       date: post.date,
       title: post.title,
       excerpt: post.excerpt,
+      featured_image: post.featured_image,
       content: post.content
     }
   });

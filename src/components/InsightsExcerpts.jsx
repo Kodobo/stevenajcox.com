@@ -39,6 +39,7 @@ export default class InsightsExcerpts extends Component {
             </h6>
           </StyledInsightsExcerptHeader>
           <InsightsExcerpt>
+            <img src={post.featured_image} style={{maxWidth: '20%'}} />
             {ReactHtmlParser(post.excerpt)}
           </InsightsExcerpt>
           <hr />
