@@ -1,49 +1,48 @@
 import React, { Component } from "react";
-import {getPosts} from "../apis/bloggerApi";
+import { getWpPostContent } from '../apis/wpApi'
 import LoaderSpinner from '../components/LoaderSpinner'
-import { BlogPostHeader, BlogPostContainer } from './styles/BloggerPosts';
-import BlogPostContent from './BlogPostContent';
+import { StyledInsightsExcerptHeader, StyledInsightsExcerptContainer } from './styles/BloggerPosts';
+import InsightsExcerpt from './InsightsExcerpt';
 import moment from "moment/moment";
 import ReactHtmlParser from "react-html-parser";
-import { getWpPostContent } from '../apis/wpApi'
 
-export default class BloggerPosts extends Component {
+export default class InsightsExcerpts extends Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: true,
-      bloggerPosts: []
+      posts: []
     }
   }
 
   componentDidMount() {
     Promise.resolve(getWpPostContent())
       .then(res => {
-        this.setState({bloggerPosts: res})
+        this.setState({posts: res})
       })
       .then(() => {
         this.setState({loading: false})
       })
   }
 
-  renderBlogPosts = () => {
-    const { bloggerPosts } = this.state;
-    return bloggerPosts.map((post, index) => {
+  renderInsightsExcerpts = () => {
+    const { posts } = this.state;
+    return posts.map((post, index) => {
       return (
-        <BlogPostContainer key={index}>
-          <BlogPostHeader>
+        <StyledInsightsExcerptContainer key={index}>
+          <StyledInsightsExcerptHeader>
             <h3>
               {ReactHtmlParser(post.title)}
             </h3>
             <h6>
               {ReactHtmlParser(moment(post.date).format("dddd Do MMMM YYYY"))}
             </h6>
-          </BlogPostHeader>
-          <BlogPostContent>
+          </StyledInsightsExcerptHeader>
+          <InsightsExcerpt>
             {ReactHtmlParser(post.excerpt)}
-          </BlogPostContent>
+          </InsightsExcerpt>
           <hr />
-        </BlogPostContainer>
+        </StyledInsightsExcerptContainer>
       );
     })
   };
@@ -51,6 +50,6 @@ export default class BloggerPosts extends Component {
   render() {
     const { loading } = this.state;
 
-    return loading ? <LoaderSpinner /> : this.renderBlogPosts();
+    return loading ? <LoaderSpinner /> : this.renderInsightsExcerpts();
   };
 }

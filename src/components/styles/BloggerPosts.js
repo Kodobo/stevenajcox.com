@@ -12,7 +12,7 @@ const commonStyles = css`
 `;
 // The descendant selectors need to use !important to override the
 // styles hardcoded into the Blogger post tags.
-export const BlogPostContainer = styled.div`
+export const InsightsExcerptContainer = styled.div`
   margin: 20px 0;
    
   & .MsoTableGrid {
@@ -24,11 +24,15 @@ export const BlogPostContainer = styled.div`
   }
 `;
 
-export const BlogPostHeader = styled.div`
+export const StyledInsightsExcerptHeader = styled.div`
   ${commonStyles};
 `;
 
-export const StyledPostContent = styled.div`
+export const StyledInsightsExcerptContainer = styled.div`
+  max-width: 100%;
+`;
+
+export const StyledExcerptContent = styled.div`
   ${commonStyles};
   max-height: ${props => props.showAll ? `100%` : `200px`};
   overflow: hidden;

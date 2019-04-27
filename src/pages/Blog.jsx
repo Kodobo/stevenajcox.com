@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BloggerPosts from '../components/BloggerPosts';
+import InsightsExcerpts from '../components/InsightsExcerpts';
 import { BodyContent } from './styles/Pages';
 
 export default class Blog extends Component {
@@ -10,7 +10,7 @@ export default class Blog extends Component {
             Insights
         </h1>
         <hr/>
-        <BloggerPosts />
+        <InsightsExcerpts />
       </BodyContent>
     )
   }
