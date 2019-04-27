@@ -5,6 +5,7 @@ import { BlogPostHeader, BlogPostContainer } from './styles/BloggerPosts';
 import BlogPostContent from './BlogPostContent';
 import moment from "moment/moment";
 import ReactHtmlParser from "react-html-parser";
+import { getWpPostContent } from '../apis/wpApi'
 
 export default class BloggerPosts extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ export default class BloggerPosts extends Component {
   }
 
   componentDidMount() {
-    Promise.resolve(getPosts())
+    Promise.resolve(getWpPostContent())
       .then(res => {
         this.setState({bloggerPosts: res})
       })
@@ -35,11 +36,11 @@ export default class BloggerPosts extends Component {
               {ReactHtmlParser(post.title)}
             </h3>
             <h6>
-              {ReactHtmlParser(moment(post.published).format("dddd Do MMMM YYYY"))}
+              {ReactHtmlParser(moment(post.date).format("dddd Do MMMM YYYY"))}
             </h6>
           </BlogPostHeader>
           <BlogPostContent>
-            {ReactHtmlParser(post.content)}
+            {ReactHtmlParser(post.excerpt)}
           </BlogPostContent>
           <hr />
         </BlogPostContainer>
