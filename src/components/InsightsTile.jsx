@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import {
   StyledInsightsTile,
-  // InsightsTileContent,
-  // ReadMoreButton,
   InsightsTileFeatureImage,
   StyledInsightsTitle,
   StyledInsightsExcerpt
 } from './styles/InsightsPosts';
-// import moment from "moment/moment";
 import ReactHtmlParser from "react-html-parser";
+import default_img from "../assets/gay-pride-gradient.jpg";
 
 export default class InsightsTile extends Component {
   constructor(props) {
@@ -18,16 +16,18 @@ export default class InsightsTile extends Component {
     }
   }
 
-  handleReadMore = () => {
-    const { showAll } = this.state;
-    this.setState({showAll: !showAll})
+  getFeaturedImage = (image) => {
+    if(image === "") {
+      return default_img;
+    }
+    return image;
   };
 
   render() {
     const post = this.props.post;
     return (
       <StyledInsightsTile>
-          <InsightsTileFeatureImage src={post.featured_image} />
+          <InsightsTileFeatureImage src={this.getFeaturedImage(post.featured_image)} />
           <StyledInsightsTitle>
             {ReactHtmlParser(post.title)}
           </StyledInsightsTitle>
