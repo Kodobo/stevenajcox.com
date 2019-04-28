@@ -10,23 +10,6 @@ const commonStyles = css`
     background-color: white !important;
   }
 `;
-// The descendant selectors need to use !important to override the
-// styles hardcoded into the Blogger post tags.
-export const InsightsExcerptContainer = styled.div`
-  margin: 20px 0;
-   
-  & .MsoTableGrid {
-    width: 100% !important;
-  }
-  
-  & * {
-    background-color: ${COLOURS.LIGHT_GREY} !important;
-  }
-`;
-
-export const StyledInsightsExcerptHeader = styled.div`
-  ${commonStyles};
-`;
 
 export const StyledInsightsExcerptContainer = styled.div`
   max-width: 100%;
@@ -34,7 +17,6 @@ export const StyledInsightsExcerptContainer = styled.div`
 
 export const StyledExcerptContent = styled.div`
   ${commonStyles};
-  max-height: ${props => props.showAll ? `100%` : `200px`};
   overflow: hidden;
   word-break: break-word;
 `;
@@ -49,4 +31,11 @@ export const ReadMoreButton = styled.button`
   box-shadow: 2px 2px 2px 1px ${COLOURS.SHADOW_PINK};
   outline: none;
   cursor: pointer;
+`;
+
+export const ExcerptFeatureImage = styled.img`
+  display: block;
+  margin: 0 auto;
+  max-height: 200px; 
+  max-width: inherit;
 `;
