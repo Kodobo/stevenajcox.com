@@ -1,41 +1,55 @@
 import styled, { css } from 'styled-components';
 import { COLOURS } from "../../globalConstants/colours";
 
-const commonStyles = css`
-  padding: 10px;
-  background-color: white !important;
-  box-shadow: 3px 5px 3px 1px ${COLOURS.SHADOW_GREY};
-  
-  & * {
-    background-color: white !important;
-  }
+const textOverflow = css`
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 `;
 
-export const StyledInsightsExcerptContainer = styled.div`
+export const StyledInsightsTiles = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
   max-width: 100%;
 `;
 
-export const StyledExcerptContent = styled.div`
-  ${commonStyles};
-  overflow: hidden;
-  word-break: break-word;
+export const StyledInsightsTile = styled.div`
+  background-color: white;
+  box-shadow: 3px 5px 3px 1px ${COLOURS.SHADOW_GREY};
+  margin: 10px;
+  max-width: 300px
+  width: 100%;
+  
+  & * {
+    background-color: white;
+    overflow: hidden;
+  }
 `;
 
-export const ReadMoreButton = styled.button`
-  margin: 20px 0;
-  padding: 5px;
-  color: white;
-  background-color: ${COLOURS.PINK_RED} !important;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 2px 2px 2px 1px ${COLOURS.SHADOW_PINK};
-  outline: none;
-  cursor: pointer;
-`;
-
-export const ExcerptFeatureImage = styled.img`
+export const InsightsTileFeatureImage = styled.img`
   display: block;
   margin: 0 auto;
-  max-height: 200px; 
-  max-width: inherit;
+  height: 114px;
+  width: 300px;
+  object-fit: cover;
+`;
+
+export const StyledInsightsTitle = styled.h3`
+  ${textOverflow};
+  overflow: hidden;
+  height: 55px;
+  margin: 10px 10px 0;
+`;
+
+export const StyledInsightsExcerpt = styled.div`
+  ${textOverflow};
+    
+  & p {
+      overflow: hidden;
+      margin: 0 10px 10px;
+      font-size: 14px
+  }
 `;

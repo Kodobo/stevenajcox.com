@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { getWpPostContent } from '../apis/wpApi'
 import LoaderSpinner from '../components/LoaderSpinner'
-import { StyledInsightsExcerptContainer } from './styles/InsightsPosts';
-import InsightsExcerpt from './InsightsExcerpt';
+import { StyledInsightsTiles } from './styles/InsightsPosts';
+import InsightsTile from './InsightsTile';
 
-export default class InsightsExcerpts extends Component {
+export default class InsightsTiles extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,10 +27,7 @@ export default class InsightsExcerpts extends Component {
     const { posts } = this.state;
     return posts.map((post, index) => {
       return (
-        <StyledInsightsExcerptContainer key={index}>
-          <InsightsExcerpt post={post} />
-          <hr />
-        </StyledInsightsExcerptContainer>
+        <InsightsTile key={index} post={post} />
       );
     })
   };
@@ -38,6 +35,10 @@ export default class InsightsExcerpts extends Component {
   render() {
     const { loading } = this.state;
 
-    return loading ? <LoaderSpinner /> : this.renderInsightsExcerpts();
+    return loading ?
+      <LoaderSpinner /> :
+      <StyledInsightsTiles>
+        {this.renderInsightsExcerpts()}
+      </StyledInsightsTiles>
   };
 }

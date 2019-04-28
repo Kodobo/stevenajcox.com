@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InsightsExcerpts from '../components/InsightsExcerpts';
+import InsightsTiles from '../components/InsightsTiles';
 import { BodyContent } from './styles/Pages';
 
 export default class Insights extends Component {
@@ -10,7 +10,7 @@ export default class Insights extends Component {
             Insights
         </h1>
         <hr/>
-        <InsightsExcerpts />
+        <InsightsTiles />
       </BodyContent>
     )
   }

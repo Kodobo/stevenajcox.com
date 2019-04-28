@@ -11,15 +11,14 @@ export const getWpPostContent = () => {
 
 const getWpPosts = (callback) => {
   const wpcom = new WPCOM();
-  const blog = wpcom.site('https://thelondongourmand.wordpress.com/');
+  // const blog = wpcom.site('https://thelondongourmand.wordpress.com/');
+  const blog = wpcom.site('https://thepatternedplate.wordpress.com/');
 
-  blog.postsList({number: 3})
+  blog.postsList({number: 10})
     .then(list => {
-      console.log(list)
       callback(list);
     })
     .catch(error => {
-      // return callback(error)
       console.log(error)
     });
 };
